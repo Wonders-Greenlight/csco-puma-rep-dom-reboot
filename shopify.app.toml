@@ -1,3 +1,29 @@
-# This file stores configurations for your Shopify app.
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
+client_id = "d1667a18a0f110ff21135973bf1e7e82"
+name = "csco-puma-rd"
+handle = "csco-puma-rd"
+application_url = "https://recall-alerts-revolution-madagascar.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "greenlight-csco-puma.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://recall-alerts-revolution-madagascar.trycloudflare.com/auth/callback",
+  "https://recall-alerts-revolution-madagascar.trycloudflare.com/auth/shopify/callback",
+  "https://recall-alerts-revolution-madagascar.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+[pos]
+embedded = false

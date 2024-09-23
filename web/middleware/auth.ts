@@ -1,16 +1,13 @@
-import { AuthQuery, BillingSettings, Shopify } from "@shopify/shopify-api";
-import { gdprTopics } from "@shopify/shopify-api/dist/webhooks/registry.js";
+import { AuthQuery, Shopify, gdprTopics } from "@shopify/shopify-api";
+// import { gdprTopics } from "@shopify/shopify-api/dist/webhooks/registry.js";
 import { Application } from "express";
 import ensureBilling from "../helpers/ensure-billing.js";
 import redirectToAuth from "../helpers/redirect-to-auth.js";
-import { BillingSettingsType } from "../index.js";
 
 export default function applyAuthMiddleware(
   app: Application,
   {
-    billing,
   }: {
-    billing: BillingSettingsType;
   },
 ) {
   app.get("/api/auth", async (req, res) => {
@@ -61,16 +58,16 @@ export default function applyAuthMiddleware(
         });
 
         // If billing is required, check if the store needs to be charged right away to minimize the number of redirects.
-        if (billing.required) {
-          const [hasPayment, confirmationUrl] = await ensureBilling(
-            session,
-            billing,
-          );
+        // if (billing.required) {
+        //   const [hasPayment, confirmationUrl] = await ensureBilling(
+        //     session,
+        //     billing,
+        //   );
 
-          if (!hasPayment) {
-            return res.redirect(confirmationUrl);
-          }
-        }
+        //   if (!hasPayment) {
+        //     return res.redirect(confirmationUrl);
+        //   }
+        // }
         const reqHost = req.query.host;
         if (!reqHost) throw new Error("No host found in query");
         const host = Shopify.Utils.sanitizeHost(reqHost);

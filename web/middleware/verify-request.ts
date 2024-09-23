@@ -6,7 +6,6 @@ import ensureBilling, {
 import redirectToAuth from "../helpers/redirect-to-auth.js";
 
 import returnTopLevelRedirection from "../helpers/return-top-level-redirection.js";
-import { BillingSettingsType } from "../index.js";
 
 const TEST_GRAPHQL_QUERY = `
 {
@@ -15,15 +14,12 @@ const TEST_GRAPHQL_QUERY = `
   }
 }`;
 
-export default function verifyRequest(
-  app: Application,
-  { billing = { required: false } }: { billing: BillingSettingsType },
-) {
+export default function verifyRequest(app: Application, {}: {}) {
   return async (req: any, res: any, next: () => any) => {
     const session = await Shopify.Utils.loadCurrentSession(
       req,
       res,
-      app.get("use-online-tokens"),
+      app.get("use-online-tokens")
     );
 
     let shop = Shopify.Utils.sanitizeShop(req.query.shop);
@@ -34,25 +30,13 @@ export default function verifyRequest(
 
     if (session?.isActive()) {
       try {
-        if (billing.required) {
-          // The request to check billing status serves to validate that the access token is still valid.
-          const [hasPayment, confirmationUrl] = await ensureBilling(
-            session,
-            billing,
-          );
+        // Make a request to ensure the access token is still valid. Otherwise, re-authenticate the user.
+        const client = new Shopify.Clients.Graphql(
+          session.shop,
+          session.accessToken
+        );
+        await client.query({ data: TEST_GRAPHQL_QUERY });
 
-          if (!hasPayment) {
-            returnTopLevelRedirection(req, res, confirmationUrl);
-            return;
-          }
-        } else {
-          // Make a request to ensure the access token is still valid. Otherwise, re-authenticate the user.
-          const client = new Shopify.Clients.Graphql(
-            session.shop,
-            session.accessToken,
-          );
-          await client.query({ data: TEST_GRAPHQL_QUERY });
-        }
         return next();
       } catch (e) {
         if (
@@ -87,7 +71,7 @@ export default function verifyRequest(
     returnTopLevelRedirection(
       req,
       res,
-      `/api/auth?shop=${encodeURIComponent(shop)}`,
+      `/api/auth?shop=${encodeURIComponent(shop)}`
     );
   };
 }
