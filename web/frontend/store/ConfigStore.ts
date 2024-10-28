@@ -82,7 +82,9 @@ const methods = {
     },
     async signIn() {
         try {
-            if ( !!state.sessionToken && !!state.refreshToken ) return
+            console.log(state.sessionToken);
+            console.log(state.refreshToken);
+            if ( !!state.sessionToken && !!state.refreshToken ) return -1;
     
             const fetch = useAuthenticatedFetch()
             const request = await fetch(`/api/shopify/login`)
@@ -90,7 +92,7 @@ const methods = {
     
             this.setSessionToken(res.accessToken)
             this.setRefreshToken(res.refreshToken)
-            SocketStore.methods.setServerUri(res.socketIoSvUri)
+            // SocketStore.methods.setServerUri(res.socketIoSvUri)
         } catch (err) {
             console.log('here')
             console.error(err)
@@ -193,6 +195,8 @@ const methods = {
             Object.entries(data).forEach(([key, val]) => {
                 state.config[key as keyof IAppConfig] = val as never
             })
+            
+            return data;
         } catch (err: any) {
             console.error(err)
         }

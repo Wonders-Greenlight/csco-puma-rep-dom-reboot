@@ -20,6 +20,15 @@ class AgilisaProvider {
 
     constructor() {
         this.setup(false)
+
+        const appCfg = AppCfgModel.findOne().then(e => {
+            // console.log("AgilisaProvider setup|Found appCfg")
+            // console.log("AgilisaProvider setup|Found appCfg has " + JSON.stringify(Object.values(e)))
+            // console.log(e);
+            // console.log("AgilisaProvider setup|Found appCfg end of message")
+        });
+ 
+
     }
 
     private async setup( isOrderQuery: boolean = false ) {
@@ -33,6 +42,8 @@ class AgilisaProvider {
         this.DB_PW = appCfg?.dbPassword
         this.ACTIVE_BRAND_IDS = appCfg?.apiBrandIds || []
         this.RETRIEVE_ONLY_AVAILABLE_STOCK = appCfg?.productRetrieveOnlyAvailable || true
+
+
     }
     
     private getSqlDbConfig(): sql.config {
@@ -54,6 +65,8 @@ class AgilisaProvider {
     }
 
     private async execSqlCmd({ query, inputs, isOrderQuery = false }: { query: string, inputs?: any[], isOrderQuery?: boolean }) {
+        console.log(`execSqlCmd |Started`)
+        console.log(`execSqlCmd |Query: ${query}`)
         try {
             await this.setup(isOrderQuery)
             const sqlConfig = this.getSqlDbConfig()
@@ -72,12 +85,15 @@ class AgilisaProvider {
             return result
         } catch (err) {
             console.error(`Error running sql cmd fn =>`, err.message)
+            console.log(`execSqlCmd |Error running sql cmd fn =>`, err.message)
             err.query = query
             throw err
         }
     }
 
     private async execQueryOnProxyServer({ query }: { query: string }) {
+        console.log(`Agilisa execQueryOnProxyServer |Started`)
+        console.log(`Agilisa execQueryOnProxyServer |Query: ${query}`)
         try {
             await this.setup()
             const { data } = await axios.post(this.PROXY_SV_DOMAIN, { query })
@@ -85,6 +101,7 @@ class AgilisaProvider {
             return data
         } catch (err) {
             console.error(`Error running sql cmd fn =>`, err.message)
+            console.log(`execQueryOnProxyServer |Error running sql cmd fn =>`, err.message)
             throw err
         }
     }

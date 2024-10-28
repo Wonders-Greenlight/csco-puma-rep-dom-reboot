@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "0c428490744ca266a546e4c194109f62"
+name = "new-csco-dev-app-0"
+handle = "new-csco-dev-app-0"
+application_url = "https://rule-audio-approximate-finish.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "greenlight-csco-puma.myshopify.com"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = ""
+
+[auth]
+redirect_urls = [
+  "https://rule-audio-approximate-finish.trycloudflare.com/auth/callback",
+  "https://rule-audio-approximate-finish.trycloudflare.com/auth/shopify/callback",
+  "https://rule-audio-approximate-finish.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+[pos]
+embedded = false

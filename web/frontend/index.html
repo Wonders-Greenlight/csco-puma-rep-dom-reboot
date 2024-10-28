@@ -18,7 +18,14 @@
     </script>
   </head>
   <body>
-    <div id="app"><!--index.jsx injects App.tsx here--></div>
+    <div id="app" style="background-color: white; min-height: 100vh;"><!--index.jsx injects App.tsx here--></div>
     <script type="module" src="/index.tsx"></script>
+    <script>
+       window.onload = () => {
+        
+        window.__SHOPIFY_DEV_HOST = localStorage.getItem('host') || new URLSearchParams(location.search).get("host")
+        localStorage.setItem('host', localStorage.getItem('host') || new URLSearchParams(location.search).get("host"));
+       }
+    </script>
   </body>
 </html>

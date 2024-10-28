@@ -1,15 +1,14 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "c6307954f21d32954d965806ac1ba10c"
-name = "csco-puma-new-app"
+name = "PUMA ERP"
 handle = "csco-puma-new-app"
-application_url = "https://m-reach-instead-pat.trycloudflare.com"
+application_url = "https://bought-coordinate-craig-yes.trycloudflare.com"
 embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
 dev_store_url = "greenlight-csco-puma.myshopify.com"
-include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
@@ -17,13 +16,13 @@ scopes = "read_analytics,read_assigned_fulfillment_orders,read_content,read_cust
 
 [auth]
 redirect_urls = [
-  "https://m-reach-instead-pat.trycloudflare.com/auth/callback",
-  "https://m-reach-instead-pat.trycloudflare.com/auth/shopify/callback",
-  "https://m-reach-instead-pat.trycloudflare.com/api/auth/callback"
+  "https://bought-coordinate-craig-yes.trycloudflare.com/auth/callback",
+  "https://bought-coordinate-craig-yes.trycloudflare.com/auth/shopify/callback",
+  "https://bought-coordinate-craig-yes.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
-api_version = "2024-07"
+api_version = "2023-07"
 
 [pos]
 embedded = false

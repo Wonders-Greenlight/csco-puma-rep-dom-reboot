@@ -1,0 +1,97 @@
+/* Input placeholder */
+.locations-stage.input-placeholder {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-rendering: geometricprecision;
+}
+
+.locations-stage.input-placeholder::placeholder {
+  color: rgb(160.65, 130.05, 73.95);
+}
+
+.locations-stage.child-d.outer-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  /* height: 7rem; */
+  width: unset;
+  justify-content: start;
+  align-items: stretch;
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
+
+  /* Content container */
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: unset;
+    width: 38rem;
+    max-width: 100%;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  /* Title container */
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    /* height: 2rem; */
+    width: unset;
+    justify-content: start;
+    align-items: stretch;
+    padding-bottom: 0.5rem;
+    box-sizing: border-box;
+  }
+
+  /* Title */
+  .title {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: rgb(28.05, 22.95, 12.75);
+  }
+
+  /* Input container */
+  .input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: 3.5rem;
+    width: unset;
+    justify-content: start;
+    align-items: stretch;
+    padding: 0.9375rem;
+    box-sizing: border-box;
+    border-radius: 0.75rem;
+    background-color: rgb(255, 255, 255);
+    border: 0.0625rem solid #e8decf;
+  }
+
+  /* Input placeholder */
+  .input-placeholder {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+
+    font-family: "Plus Jakarta Sans", sans-serif;
+    text-rendering: geometricprecision;
+  }
+
+  .input-placeholder::placeholder {
+    color: rgb(160.65, 130.05, 73.95);
+  }
+}

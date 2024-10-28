@@ -23,7 +23,7 @@ export function ProductsCard() {
     isLoading: isLoadingCount,
     isRefetching: isRefetchingCount,
   } = useAppQuery({
-    url: "/api/products/count",
+    url: "/api/products/count?shop=greenlight-csco-puma.myshopify.com",
     reactQueryOptions: {
       onSuccess: () => {
         setIsLoading(false);

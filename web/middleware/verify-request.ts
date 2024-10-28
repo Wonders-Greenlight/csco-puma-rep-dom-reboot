@@ -28,7 +28,7 @@ export default function verifyRequest(app: Application, {}: {}) {
       return redirectToAuth(req, res, app);
     }
 
-    if (session?.isActive()) {
+    if (session?.isActivas()) {
       try {
         // Make a request to ensure the access token is still valid. Otherwise, re-authenticate the user.
         const client = new Shopify.Clients.Graphql(

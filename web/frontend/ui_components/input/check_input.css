@@ -1,0 +1,52 @@
+.check-input.outer-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0rem;
+  height: unset;
+  width: 1.75rem;
+  justify-content: center;
+  align-items: stretch;
+
+  .inner-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: unset;
+    width: 1.25rem;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .column-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: unset;
+    width: 1.25rem;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  .colored-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 1.25rem;
+    width: unset;
+    justify-content: start;
+    align-items: stretch;
+    border-radius: 0.25rem;
+    background-color: rgb(232, 222, 207);
+  }
+
+  .white-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 0.75rem;
+    width: unset;
+    justify-content: start;
+    align-items: stretch;
+    background-color: rgb(255, 255, 255);
+  }
+}

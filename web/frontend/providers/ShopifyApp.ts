@@ -3,10 +3,11 @@ import AppBridge, { AppBridgeState, ClientApplication } from '@shopify/app-bridg
 import { Redirect, SessionToken } from '@shopify/app-bridge/actions'
 
 const URLParams = new URLSearchParams(location.search)
-
+console.log("localStorage.getItem('host')",localStorage.getItem('host'))
+console.log("window.__SHOPIFY_DEV_HOST",window.__SHOPIFY_DEV_HOST)
 const ShopifyApp = AppBridge({
     apiKey: process.env.SHOPIFY_API_KEY || '',
-    host: URLParams.get('host') || '',
+    host: localStorage.getItem('host') || window.__SHOPIFY_DEV_HOST || URLParams.get('host') || '',
     forceRedirect: true
 })
 

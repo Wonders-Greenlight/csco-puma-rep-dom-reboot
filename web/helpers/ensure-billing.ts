@@ -34,7 +34,7 @@ export default async function ensureBilling(
   let hasPayment;
   let confirmationUrl = null;
 
-  if (await hasActivePayment(session, { chargeName, interval })) {
+  if (await hasActivasPayment(session, { chargeName, interval })) {
     hasPayment = true;
   } else {
     hasPayment = false;
@@ -49,7 +49,7 @@ export default async function ensureBilling(
   return [hasPayment, confirmationUrl];
 }
 
-async function hasActivePayment(
+async function hasActivasPayment(
   session: SessionInterface,
   { chargeName, interval }: Pick<BillingSettings, "interval" | "chargeName">,
 ) {

@@ -13,7 +13,7 @@ import './src/providers/TaskProvider.js'
 import SocketProvider from './src/providers/SocketProvider.js';
 
 // Middlewares
-import { addSessionShopToReqParams, rootCheckAndRedirect, serveClientApp } from './src/middlewares/serveApp.js';
+import { rootCheckAndRedirect, serveClientApp } from './src/middlewares/serveApp.js';
 
 // Config
 import config, { initChecker } from './src/config.js';
@@ -42,8 +42,7 @@ class Server {
     private setup() {
         this.mongodbConfig()
         this.PORT = Number(process.env.BACKEND_PORT) || Number(process.env.PORT) || 3000;
-        this.isProduction = false
-        // this.isProduction = !config.GLOBAL.IS_TESTING
+        this.isProduction = !config.GLOBAL.IS_TESTING
         this.STATIC_PATH = this.isProduction ? folders.PUBLIC : folders.PUBLIC_DEV
         this.createShopifyApp()
         this.app = express()
@@ -55,8 +54,6 @@ class Server {
             this.shopify.auth.callback(),
             this.shopify.redirectToShopifyOrAppRoot(),
         )
-        
-        this.app.use("/*", addSessionShopToReqParams)
         this.app.use(express.json());
         this.app.use(cookieParser())
         

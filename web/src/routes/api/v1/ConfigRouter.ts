@@ -1,7 +1,7 @@
 import { Router } from 'express'
 
 // Controllers
-// import ConfigController from '../../../controllers/'
+import ConfigController from '../../../controllers/ConfigController.js'
 
 class ConfigRouter {
     public router: Router;
@@ -12,9 +12,9 @@ class ConfigRouter {
     }
 
     routes() {
-        // this.router.get('/', ConfigController.getConfig)
-        // this.router.post('/', ConfigController.setConfig)
-        // this.router.put('/:id', ConfigController.updateConfig)
+        this.router.get('/', ConfigController.getConfig)
+        this.router.post('/', ConfigController.setConfig)
+        this.router.put('/:id', ConfigController.updateConfig)
     }
 }
 

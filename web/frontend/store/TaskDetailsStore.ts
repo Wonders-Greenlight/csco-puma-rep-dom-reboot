@@ -35,7 +35,7 @@ const methods = {
         try {
             const dbTask = await useAxios({
                 method: 'GET',
-                uri: computeds.fetchPageUrl
+                uri: computeds.fetchPageUrl()
             })
 
             lastStatus = state.filters.status

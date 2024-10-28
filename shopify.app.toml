@@ -3,13 +3,12 @@
 client_id = "d1667a18a0f110ff21135973bf1e7e82"
 name = "csco-puma-rd"
 handle = "csco-puma-rd"
-application_url = "https://recall-alerts-revolution-madagascar.trycloudflare.com"
+application_url = "https://survive-another-participation-gen.trycloudflare.com"
 embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
 dev_store_url = "greenlight-csco-puma.myshopify.com"
-include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
@@ -17,9 +16,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://recall-alerts-revolution-madagascar.trycloudflare.com/auth/callback",
-  "https://recall-alerts-revolution-madagascar.trycloudflare.com/auth/shopify/callback",
-  "https://recall-alerts-revolution-madagascar.trycloudflare.com/api/auth/callback"
+  "https://survive-another-participation-gen.trycloudflare.com/auth/callback",
+  "https://survive-another-participation-gen.trycloudflare.com/auth/shopify/callback",
+  "https://survive-another-participation-gen.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

@@ -1,0 +1,485 @@
+/* Outer container */
+
+.events-stage {
+  .child-a.outer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: 4rem;
+    justify-content: start;
+    align-items: stretch;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    /* Inner container */
+    .inner-container {
+      display: flex;
+      flex-direction: row;
+      gap: 0rem;
+      width: 100%;
+      justify-content: center;
+      align-items: stretch;
+      padding: 0.25rem;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+      background-color: rgb(244.8, 239.7, 229.5);
+    }
+
+    /* Button common styles */
+    .button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0rem 0.5rem;
+      box-sizing: border-box;
+      border-radius: 1rem;
+    }
+
+    /* Button for Upcoming */
+    .button-upcoming {
+      width: 8.3125rem;
+      background-color: rgb(255, 255, 255);
+    }
+
+    /* Button for Stores */
+    .button-stores {
+      width: 6.6875rem;
+      background-color: unset;
+    }
+
+    /* Button for History */
+    .button-history {
+      width: 6.875rem;
+      background-color: unset;
+    }
+
+    /* Label common styles */
+    .label {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: stretch;
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 500;
+    }
+
+    /* Text for Upcoming */
+    .label-upcoming {
+      color: rgb(28.05, 22.95, 12.75);
+    }
+
+    /* Text for Stores and History */
+    .label-inactive {
+      color: rgb(160.65, 130.05, 73.95);
+    }
+  }
+
+  /* Outer container */
+  .child-b.outer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: stretch;
+    padding: 1.25rem 0rem;
+    box-sizing: border-box;
+    /* Bar common styles */
+    .bar {
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+      justify-content: start;
+      align-items: stretch;
+      width: 0.5rem;
+      border-radius: 0.25rem;
+    }
+
+    /* Bar for active (green) */
+    .bar-active {
+      background-color: rgb(0, 153, 99.45);
+    }
+
+    /* Bar for inactive (light brown) */
+    .bar-inactive {
+      background-color: rgb(232.05, 221.85, 206.55);
+    }
+  }
+
+  /* Outer container */
+  .child-c.outer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: 4.5rem;
+    justify-content: space-between;
+    align-items: stretch;
+    /* Inner container */
+    .inner-container {
+      display: flex;
+      flex-direction: row;
+      gap: 0.75rem;
+      width: 100%;
+      justify-content: space-between;
+      align-items: stretch;
+      padding: 0.75rem 1rem;
+      box-sizing: border-box;
+    }
+
+    /* Button common styles */
+    .button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      padding: 0rem 1.25rem;
+      box-sizing: border-box;
+      border-radius: 1.5rem;
+    }
+
+    /* Button for Create Event */
+    .button-create {
+      background-color: rgb(0, 153, 99.45);
+    }
+
+    .button-create .text {
+      width: 6.3125rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 700;
+      color: rgb(255, 255, 255);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Button for Schedule Event */
+    .button-schedule {
+      width: 10.0625rem;
+      background-color: rgb(244.8, 239.7, 229.5);
+    }
+
+    .button-schedule .text {
+      width: 7.5625rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 700;
+      color: rgb(28.05, 22.95, 12.75);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  /* Outer container */
+  .child-d.outer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 6.9375rem;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+
+    /* Left container */
+    .left-container {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      width: 12.3125rem;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    /* Icon container */
+    .icon-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 0.5rem;
+      background-color: rgb(244.8, 239.7, 229.5);
+    }
+
+    /* Inner icon */
+    .inner-icon {
+      display: flex;
+      flex-direction: column;
+      height: 1.5rem;
+      /* background-color: rgb(28.05, 22.95, 12.75); */
+    }
+
+    /* Content container */
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      width: 8.3125rem;
+    }
+
+    /* Title */
+    .title {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+
+    /* Description */
+    .description {
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 400;
+      color: rgb(160.65, 130.05, 73.95);
+    }
+
+    /* Right container */
+    .right-container {
+      display: flex;
+      flex-direction: column;
+      width: 4rem;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    /* Status */
+    .status {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 400;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+  }
+
+  /* Outer container */
+  .child-e.outer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 7.125rem;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+
+    /* Left container */
+    .left-container {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      width: 15.9375rem;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    /* Icon container */
+    .icon-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 0.5rem;
+      background-color: rgb(244.8, 239.7, 229.5);
+    }
+
+    .inner-icon {
+      display: flex;
+      flex-direction: column;
+      height: 1.5rem;
+   
+    }
+
+    /* Content container */
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      width: 11.9375rem;
+    }
+
+    .title {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+
+    .description {
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 400;
+      color: rgb(160.65, 130.05, 73.95);
+    }
+
+    /* Right container */
+    .right-container {
+      display: flex;
+      flex-direction: column;
+      width: 5.375rem;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    .status {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 400;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+  }
+
+  /* Outer container */
+  .child-f.outer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: 4rem;
+    justify-content: center;
+    align-items: stretch;
+
+    .button-group {
+      display: flex;
+      flex-direction: row;
+      gap: 0.75rem;
+      width: 30rem;
+      justify-content: center;
+      align-items: stretch;
+      padding: 0.75rem 1rem;
+      box-sizing: border-box;
+    }
+
+    /* Button common styles */
+    .button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      padding: 0rem 1rem;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+      background-color: rgb(244.8, 239.7, 229.5);
+    }
+
+    /* Button for Go to First */
+    .button-first {
+      width: 10.875rem;
+    }
+
+    .button-first .text {
+      width: 4.4375rem;
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 700;
+      color: rgb(28.05, 22.95, 12.75);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Button for Go to Last */
+    .button-last {
+      width: 10.75rem;
+    }
+
+    .button-last .text {
+      width: 4.3125rem;
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 700;
+      color: rgb(28.05, 22.95, 12.75);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  /* Outer container */
+  .child-g.outer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    height: 3.5rem;
+    justify-content: start;
+    align-items: stretch;
+    padding: 0.75rem;
+    box-sizing: border-box;
+
+    /* Common button container */
+    .button {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      justify-content: center;
+      align-items: stretch;
+      padding: 0rem 0.5rem;
+      box-sizing: border-box;
+      border-radius: 1rem;
+      background-color: rgb(244.8, 239.7, 229.5);
+    }
+
+    /* Task container */
+    .task-icon-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      width: 1.25rem;
+    }
+
+    .task-icon {
+      height: 1.25rem;
+    }
+
+    /* Empty space */
+    .empty-space {
+      height: 0.75rem;
+    }
+
+    /* Button text */
+    .button-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 500;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+
+    /* Specific widths for buttons */
+    .button-all-tasks {
+      width: 8rem;
+    }
+
+    .button-failed {
+      width: 7.0625rem;
+    }
+
+    .button-in-progress {
+      width: 9.1875rem;
+    }
+  }
+
+  .child-h.empty-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 1.25rem;
+    justify-content: start;
+    align-items: stretch;
+    background-color: rgb(255, 255, 255);
+  }
+}

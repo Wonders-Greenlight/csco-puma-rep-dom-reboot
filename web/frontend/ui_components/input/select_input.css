@@ -1,0 +1,85 @@
+.tasks-stage.child-e.row-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height: 7rem;
+  justify-content: start;
+  align-items: stretch;
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
+  appearance: none;
+  /* Inner column */
+  .column-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    width: 30rem;
+    max-width: 100%;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  /* Title container */
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 2rem;
+    justify-content: start;
+    align-items: stretch;
+    padding-bottom: 0.5rem;
+    box-sizing: border-box;
+  }
+
+  /* Title text */
+  .title-text {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: rgb(28.05, 22.95, 12.75);
+  }
+
+  /* Select box */
+  .select-box {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: 3.5rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 1.0625rem 1.4375rem 0.9375rem 0.9375rem;
+    box-sizing: border-box;
+    border-radius: 0.75rem;
+    background-color: rgb(255, 255, 255);
+    border: 0.0625rem solid #e8decf;
+  }
+
+  .select-box option:first-of-type {
+    color: #e8decf;
+  }
+
+  /* Color bar */
+  .color-bar {
+    display: flex;
+    flex-direction: column;
+    width: 0.6875rem;
+    /* background-color: rgb(160.65, 130.05, 73.95); */
+  }
+
+  /* Option text */
+  .option-text {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 1rem;
+    line-height: 100%;
+    font-weight: 400;
+    color: rgb(28.05, 22.95, 12.75);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    appearance: none;
+  }
+}

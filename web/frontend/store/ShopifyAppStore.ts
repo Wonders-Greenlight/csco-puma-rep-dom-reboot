@@ -6,7 +6,7 @@ import { Toast } from "@shopify/app-bridge/actions";
 const DEFAULT_TOAST_TIMEOUT = 3000
 
 const state = {
-    shop: '',
+    // shop: 'greenlight-csco-puma.myshopify.com',
     toastInstance: Toast?.create(ShopifyApp, {
         message: '',
         duration: DEFAULT_TOAST_TIMEOUT

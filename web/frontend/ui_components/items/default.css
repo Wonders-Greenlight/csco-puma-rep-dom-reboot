@@ -1,0 +1,205 @@
+.default-item.flex-column-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  width: unset;
+  justify-content: start;
+  align-items: stretch;
+
+  .row-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 6.9375rem;
+    width: unset;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .item-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: unset;
+    width: 12.3125rem;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  .icon-box {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: unset;
+    width: 3rem;
+    justify-content: center;
+    align-items: stretch;
+    border-radius: 0.5rem;
+    background-color: rgb(244.8, 239.7, 229.5);
+    max-height: 3rem;
+  }
+
+  .icon-inner-box {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: unset;
+    width: 1.5rem;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .icon-column-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: unset;
+    width: 1.5rem;
+    justify-content: start;
+    align-items: stretch;
+    background-color: rgb(28.05, 22.95, 12.75);
+  }
+
+  .icon-column-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: unset;
+    width: 1.25rem;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  .text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: unset;
+    width: 8.3125rem;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  .text-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 1.5rem;
+    width: unset;
+    justify-content: start;
+    align-items: stretch;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: rgb(28.05, 22.95, 12.75);
+  }
+
+  .text-detail {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    font-weight: 400;
+    color: rgb(160.65, 130.05, 73.95);
+  }
+
+  .text-date {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    font-weight: 400;
+    color: rgb(160.65, 130.05, 73.95);
+  }
+
+  .text-status {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: rgb(28.05, 22.95, 12.75);
+    display: flex;
+    align-items: center;
+  }
+
+  .long-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 7.125rem;
+    width: unset;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .large-item-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: unset;
+    width: 15.9375rem;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  .icon-box-large {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: unset;
+    width: 3rem;
+    justify-content: center;
+    align-items: stretch;
+    border-radius: 0.5rem;
+    background-color: rgb(244.8, 239.7, 229.5);
+    max-height: 3rem;
+  }
+
+  .icon-inner-large {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: unset;
+    width: 1.5rem;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .icon-column-large-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: unset;
+    width: 1.5rem;
+    justify-content: start;
+    align-items: stretch;
+    background-color: rgb(28.05, 22.95, 12.75);
+  }
+
+  .icon-column-large-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: unset;
+    width: 1.125rem;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  .large-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: unset;
+    width: 11.9375rem;
+    justify-content: start;
+    align-items: stretch;
+  }
+}

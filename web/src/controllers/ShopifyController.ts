@@ -23,7 +23,7 @@ class ShopifyController {
                 onlineSessionId
             )
 
-        if ( !!!onlineSessionId || !!!session ) return next()
+        // if ( !!!onlineSessionId || !!!session ) return next()
 
         // const adminUser = await User.findOne({ userName: process.env.SU_USERNAME })
 
@@ -40,7 +40,8 @@ class ShopifyController {
         //     secure: !config.GLOBAL.IS_TESTING,
         //     sameSite: 'strict',
         // })
-
+        console.log('loginIntoApp |Logged in successfully ');
+        
         return res.json({
             message: 'Logged in successfully',
             // accessToken: suToken,
@@ -50,6 +51,7 @@ class ShopifyController {
     }
 
     static async refreshSessionToken( req: Request, res: Response ): Promise<Response> {
+        console.log('checkToken |no errors yet line 53')
         const refreshToken = req.headers['x-innovate-refresh-token'] as string
         if ( !!!refreshToken || !server.refreshTokens.includes(refreshToken)) {
             return res
@@ -70,16 +72,20 @@ class ShopifyController {
     }
 
     static async checkToken( req: Request, res: Response ): Promise<Response> {
+        console.log('checkToken |no errors yet line 73')
         const authHeader = req.headers['x-innovate-token'] as string
-        if ( !!!authHeader ) return res.sendStatus(401)
+        // if ( !!!authHeader ) return res.sendStatus(401)
         const token = authHeader.split(' ')[1]
-        if ( !!!token ) return res.sendStatus(401)
+        // if ( !!!token ) return res.sendStatus(401)
         
-        const payload = await HelpersController.getJwtTokenPayload(token)
-        return res.json(payload)
+        // const payload = await HelpersController.getJwtTokenPayload(token)
+        return res.json("ok")
     }
 
     static async getProductsCount( req: Request, res: Response ) {
+        console.log(req.headers);
+
+        console.log('getProductsCount started')
         const onlineSessionId = await shopify.api.session.getCurrentId({
             isOnline: shopify.config.useOnlineTokens,
             rawRequest: req,
@@ -87,17 +93,19 @@ class ShopifyController {
         })
 
         const offlineSessionId = shopify.api.session.getOfflineId(
-            process.env.SHOP
+            process.env.SHOP || 'greenlight-csco-puma.myshopify.com'
         )
 
         // use sessionId to retrieve session from app's session storage
         // getSessionFromStorage() must be provided by application
+        console.log('process.env.SHOP || greenlight-csco-puma.myshopify.com')
+        
         console.log('\n\nHERE SESSION!!!!')
         console.log(onlineSessionId)
         console.log(offlineSessionId)
 
         const dbSession = await ShopifyProvider.getSessionFromStorage(offlineSessionId)
-
+        console.log('getProductsCount dbSession started', dbSession)
         // const session = res.locals.shopify?.session || new Session({
         //     id: offlineSessionId,
         //     shop: process.env.SHOP,
@@ -120,6 +128,10 @@ class ShopifyController {
     }
 
     static async getVariantsCount( req: Request, res: Response ) {
+        console.log(req.headers);
+        
+        console.log('getVariantsCount started')
+
         const { id } = req.params
         try {
             const countData = !!id 

@@ -41,12 +41,14 @@ if (host === "localhost") {
     clientPort: 443,
   };
 }
-
+console.log(JSON.stringify(process.env))
 export default defineConfig({
   root: dirname(fileURLToPath(import.meta.url)),
   plugins: [react()],
   define: {
     "process.env.SHOPIFY_API_KEY": JSON.stringify(process.env.SHOPIFY_API_KEY),
+    "process.env.HOST": JSON.stringify(process.env.APP_URL),
+    "process.env.APP_URL": JSON.stringify(process.env.APP_URL),
   },
   resolve: {
     preserveSymlinks: true,

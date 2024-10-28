@@ -1,0 +1,714 @@
+
+
+
+.summary-head.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  width: unset;
+  justify-content: start;
+  align-items: stretch;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: 2.9375rem;
+    width: unset;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 1rem 1rem 0.5rem 1rem;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: unset;
+    width: 100%;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  .title-text {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+    font-weight: 700;
+    color: rgb(28.05, 22.95, 12.75);
+  }
+
+  .summary {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 5.5rem;
+    width: unset;
+    justify-content: start;
+    align-items: stretch;
+    padding: 0.25rem 1rem 0.75rem 1rem;
+    box-sizing: border-box;
+  }
+
+  .summary-text {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: rgb(28.05, 22.95, 12.75);
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: 4rem;
+    width: unset;
+    justify-content: start;
+    align-items: stretch;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    box-sizing: border-box;
+  }
+
+  .filters-row {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: unset;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0.25rem;
+    border-radius: 1.25rem;
+    background-color: rgb(244.8, 239.7, 229.5);
+  }
+
+  .filter-today,
+  .filter-week,
+  .filter-month {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: unset;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 0.5rem;
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .filter-text {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    font-weight: 500;
+  }
+
+  .filter-week .filter-text,
+  .filter-month .filter-text {
+    color: rgb(160.65, 130.05, 73.95);
+  }
+
+  .tasks {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: 7.5rem;
+    width: unset;
+    justify-content: start;
+    align-items: stretch;
+    padding: 1.5rem 1rem;
+    box-sizing: border-box;
+  }
+
+  .tasks-today {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  .task-label {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: rgb(28.05, 22.95, 12.75);
+  }
+
+  .task-stats {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: rgb(160.65, 130.05, 73.95);
+  }
+
+  .tasks-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 2.3125rem;
+    width: unset;
+    justify-content: start;
+    align-items: stretch;
+    padding: 0.25rem 1rem 0.75rem 1rem;
+  }
+
+  .tasks-description {
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    font-weight: 400;
+    color: rgb(160.65, 130.05, 73.95);
+  }
+
+  .products,
+  .variants {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    justify-content: start;
+    align-items: stretch;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    height: 5.625rem;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    box-shadow:
+      0 2px 2px 0 rgba(13, 15, 11, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12),
+      0 1px 5px 0 rgba(42, 43, 41, 0.2);
+    margin: 1rem;
+  }
+
+  .product-info,
+  .variant-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 12.9375rem;
+  }
+
+  .product-label,
+  .variant-label {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    color: rgb(28.05, 22.95, 12.75);
+  }
+
+  .product-count,
+  .variant-count {
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    font-weight: 400;
+    color: rgb(160.65, 130.05, 73.95);
+  }
+}
+
+.summary-foot.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  width: unset;
+  justify-content: start;
+  align-items: stretch;
+
+  .filter-section {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: 4rem;
+    width: unset;
+    justify-content: start;
+    align-items: stretch;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: unset;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0.25rem;
+    border-radius: 1.25rem;
+    background-color: rgb(244.8, 239.7, 229.5);
+  }
+
+  .filter-today,
+  .filter-week,
+  .filter-month {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 0.5rem;
+    border-radius: 1rem;
+  }
+
+  .filter-week {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .filter-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    justify-content: start;
+    align-items: stretch;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    font-weight: 500;
+  }
+
+  .hoy {
+    color: rgb(160.65, 130.05, 73.95);
+  }
+
+  .semana {
+    color: rgb(28.05, 22.95, 12.75);
+  }
+
+  .mes {
+    color: rgb(160.65, 130.05, 73.95);
+  }
+
+  .events {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 5.5rem;
+    width: unset;
+    justify-content: start;
+    align-items: stretch;
+    padding: 0.25rem 1rem 0.75rem 1rem;
+  }
+
+  .events-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: rgb(28.05, 22.95, 12.75);
+    white-space: break-spaces;
+  }
+
+  .empty-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 1.25rem;
+    width: unset;
+    justify-content: start;
+    align-items: stretch;
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+.summary-stage.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  width: unset;
+  justify-content: start;
+  align-items: stretch;
+  background-color: rgb(255, 255, 255);
+  /* Uncomment if needed */
+  /* height: 52.75rem; */
+  .inner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    width: unset;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+/* Section container */
+.summary-stage.section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: rgb(255, 255, 255);
+  /* Empty section container */
+  .empty-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  /* Large container */
+  .large-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 10.75rem;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  /* Outer container */
+  .child-a.outer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 1rem 1rem 0.5rem 1rem;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+
+    /* Content container */
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+      width: 100%;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    /* Title text */
+    .title-text {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      font-size: 1.125rem;
+      line-height: 1.4375rem;
+      font-weight: 700;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+  }
+
+  /* Outer container */
+  .child-b.outer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 5.5rem;
+    justify-content: start;
+    align-items: stretch;
+    padding: 0.25rem 1rem 0.75rem 1rem;
+    box-sizing: border-box;
+
+    /* Text content */
+    .text-content {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 400;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+  }
+
+  /* child-c promoved as events_navigation component */
+
+
+  /* Outer container */
+  .child-d.outer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: 7.5rem;
+    justify-content: start;
+    align-items: stretch;
+    padding: 1.5rem 1rem;
+    box-sizing: border-box;
+
+    /* Content container */
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 100%;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    /* Title container */
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+      height: 1.5rem;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    /* Title text */
+    .title-text {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+
+    /* Percentage container */
+    .percentage-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+      height: 2.5rem;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    /* Percentage text */
+    .percentage-text {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      font-weight: 700;
+      color: rgb(160.65, 130.05, 73.95);
+    }
+  }
+
+  /* Outer container */
+  .child-e.outer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 2.3125rem;
+    justify-content: start;
+    align-items: stretch;
+    padding: 0.25rem 1rem 0.75rem 1rem;
+    box-sizing: border-box;
+
+    /* Text content */
+    .text-content {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 400;
+      color: rgb(160.65, 130.05, 73.95);
+    }
+  }
+
+  /* Outer container */
+  .child-f.outer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 7.625rem;
+    justify-content: start;
+    align-items: stretch;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    /* Inner container */
+    .inner-container {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      height: 5.625rem;
+      justify-content: space-between;
+      align-items: stretch;
+      padding: 1rem;
+      box-sizing: border-box;
+      border-radius: 0.75rem;
+      background-color: rgb(255, 255, 255);
+      box-shadow:
+        0 2px 2px 0 rgba(13, 15, 11, 0.14),
+        0 3px 1px -2px rgba(0, 0, 0, 0.12),
+        0 1px 5px 0 rgba(42, 43, 41, 0.2);
+    }
+
+    /* Content container */
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      width: 12.9375rem;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    /* Title container */
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+      height: 1.25rem;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    /* Title text */
+    .title-text {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      font-weight: 700;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+
+    /* Number container */
+    .number-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+      height: 1.3125rem;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    /* Number text */
+    .number-text {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 400;
+      color: rgb(160.65, 130.05, 73.95);
+    }
+  }
+
+  /* Outer container */
+  .child-g.outer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: 4rem;
+    justify-content: start;
+    align-items: stretch;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+
+    /* Inner container */
+    .inner-container {
+      display: flex;
+      flex-direction: row;
+      gap: 0rem;
+      width: 100%;
+      justify-content: center;
+      align-items: stretch;
+      padding: 0.25rem;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+      background-color: rgb(244.8, 239.7, 229.5);
+    }
+
+    /* Button common styles */
+    .button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      padding: 0rem 0.5rem;
+      box-sizing: border-box;
+      border-radius: 1rem;
+    }
+
+    /* Button for Hoy */
+    .button-hoy {
+      width: 6.6875rem;
+      align-items: center;
+      display: flex;
+    }
+
+    /* Button for Semana */
+    .button-semana {
+      width: 8.4375rem;
+      background-color: rgb(255, 255, 255);
+      align-items: center;
+      display: flex;
+    }
+
+    /* Button for Mes */
+    .button-mes {
+      width: 6.75rem;
+      align-items: center;
+      display: flex;
+    }
+
+    /* Label common styles */
+    .label {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    /* Text common styles */
+    .label-text {
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 500;
+    }
+
+    /* Text for Hoy and Mes */
+    .label-text-hoy,
+    .label-text-mes {
+      color: rgb(160.65, 130.05, 73.95);
+    }
+
+    /* Text for Semana */
+    .label-text-semana {
+      color: rgb(28.05, 22.95, 12.75);
+    }
+  }
+
+  /* Outer container */
+  .child-h.outer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 5.5rem;
+    justify-content: start;
+    align-items: stretch;
+    padding: 0.25rem 1rem 0.75rem 1rem;
+    box-sizing: border-box;
+
+    /* Text content */
+    .text-content {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 400;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+  }
+
+  /* Spacer */
+  .child-i.spacer {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 1.25rem;
+    justify-content: start;
+    align-items: stretch;
+    background-color: rgb(255, 255, 255);
+  }
+}
