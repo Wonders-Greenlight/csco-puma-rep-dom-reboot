@@ -2,6 +2,7 @@
 .env
 .env.*
 
+shopify.app.*
 # Dependency directory
 node_modules
 
