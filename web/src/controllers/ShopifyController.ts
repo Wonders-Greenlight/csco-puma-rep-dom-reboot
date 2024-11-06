@@ -105,7 +105,7 @@ class ShopifyController {
         console.log(offlineSessionId)
 
         const dbSession = await ShopifyProvider.getSessionFromStorage(offlineSessionId)
-        console.log('getProductsCount dbSession started', dbSession)
+        // console.log('getProductsCount dbSession started', dbSession)
         // const session = res.locals.shopify?.session || new Session({
         //     id: offlineSessionId,
         //     shop: process.env.SHOP,
@@ -128,7 +128,7 @@ class ShopifyController {
     }
 
     static async getVariantsCount( req: Request, res: Response ) {
-        console.log(req.headers);
+        // console.log(req.headers);
         
         console.log('getVariantsCount started')
 

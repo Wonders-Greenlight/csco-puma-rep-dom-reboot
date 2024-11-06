@@ -184,7 +184,7 @@ We fixed this issue with v3.4.0 of the CLI, so after updating it, you can make t
      };
    } else {
      hmrConfig = {
-       protocol: "wss",
+       protocol: "ws",
        host: host,
        port: process.env.FRONTEND_PORT,
        clientPort: 443,

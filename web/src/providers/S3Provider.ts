@@ -4,7 +4,6 @@ import {
     DeleteObjectCommand
 } from '@aws-sdk/client-s3';
 
-
 class S3Provider {
     public s3Client: S3Client
     public s3ClientV2: S3

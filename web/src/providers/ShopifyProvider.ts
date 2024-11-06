@@ -207,8 +207,8 @@ class ShopifyProvider {
           isEmbeddedApp: true,
           logger: {
             // level: LogSeverity[config.GLOBAL.IS_TESTING ? 'Debug' : 'Error'],
-            level: LogSeverity[config.GLOBAL.IS_TESTING ? "Error" : "Error"],
-            httpRequests: true,
+            level: "error",
+            httpRequests: false,
             timestamps: true,
           },
         },
@@ -577,8 +577,9 @@ class ShopifyProvider {
     return product;
   }
 
+  
   public async getProductsCount(clearSession: boolean = true) {
-    console.log('getProductsCount dbSession started', this.getOfflineSession())
+    // console.log('getProductsCount dbSession started', this.getOfflineSession())
     const count = await shopify.api.rest.Product.count({
       session: await this.getOfflineSession(),
     });

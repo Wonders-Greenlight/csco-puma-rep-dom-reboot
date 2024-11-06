@@ -111,6 +111,7 @@ class AgilisaProvider {
         await this.setup()
         const count = await this.getMasterProductsCount()
         const pages = Math.ceil(count / limit)
+        // const pages = 4;
 
         const cfg = await AppCfgModel.findOne()        
         const where = cfg.productRetrieveOnlyWebItem ? 'WHERE (WebItem = 1)' : ''
@@ -249,6 +250,7 @@ class AgilisaProvider {
 
         const count = await this.getMasterInventoryCount()
         const pages = Math.ceil(count / limit)
+        // const pages = 4;
         
         const products = []
 

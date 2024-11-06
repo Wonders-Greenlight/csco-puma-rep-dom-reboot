@@ -327,6 +327,9 @@ class ProductTasksController extends BaseTaskController {
         });
 
         payload.variants = variants;
+        // if (!(thisProduct && thisProduct.id)) {
+        //   payload.variants = removeDuplicatesByField(removeDuplicatesByField(variants, "title"), "options").slice(0,100);
+        // }
 
         Object.entries({
           ...product,
@@ -547,6 +550,7 @@ class ProductTasksController extends BaseTaskController {
         status,
         title: product.title || undefined,
         variants,
+        // variants: isUpdating ? variants : removeDuplicatesByField(removeDuplicatesByField(variants, "title"), "options").slice(0, 100),
         options: product.options,
         images,
         metafields: product.metafields,
@@ -805,9 +809,9 @@ class ProductTasksController extends BaseTaskController {
     // - CHECK ALL PRODUCTS -> VARIANTS
 
     // parentPort.postMessage({ action: 'message', payload: `CHECKING VARIANTS INVENTORY!!!` })
-    console.time("INVENTORY_CHECK");
+    console.log("INVENTORY_CHECK");
     const locationIds: number[] = [];
-
+    console.log('checkAllVariantInventories 0')
     products.forEach((p) => {
       p.variants.forEach((v) => {
         if (!!!v.inventory) return;
@@ -819,7 +823,7 @@ class ProductTasksController extends BaseTaskController {
         locationIds.push(...newInventories);
       });
     });
-
+    console.log('checkAllVariantInventories 1')
     // parentPort.postMessage({ action: 'message', payload: `DISTINCT LOCATION IDs BELOW` })
     // parentPort.postMessage({ action: 'message', payload: locationIds })
 
@@ -828,67 +832,79 @@ class ProductTasksController extends BaseTaskController {
         message: "No location IDs to update for",
       };
     }
-
+    console.log('checkAllVariantInventories 2')
     const allInventoryLevels = await ShopifyProvider.getAllInventoryLevels({
       location_ids: locationIds.join(","),
     });
-
+    console.log('checkAllVariantInventories 3')
     for (const product of products) {
-      const thisProduct = ProductTasksController.shopifyProducts.find(
-        (x) =>
-          x.id === product.shopifyId ||
-          x.admin_graphql_api_id === product.shopifyId
-      );
-
-      if (!!!thisProduct) continue;
-
-      for await (const variant of product.variants) {
-        if (!!!variant.inventory) continue;
-
-        // CHECK INVENTORY LEVELS -> INVENTORY_ITEM_ID
-        // IF INVENTORY_LEVELS !INCLUDES -> _product.inventory
-        // run inventoryActivate gql mutation / rest fn with no available param
-        const thisVariant = thisProduct?.variants.find(
-          (v: any) =>
-            v.id === variant.shopifyId ||
-            v.admin_graphql_api_id === variant.shopifyId
+      try {
+        const thisProduct = ProductTasksController.shopifyProducts.find(
+          (x) =>
+            x.id === product.shopifyId ||
+            x.admin_graphql_api_id === product.shopifyId
         );
-        if (!!!thisVariant) continue;
-
-        try {
-          const variantInventoryLevels = allInventoryLevels.filter(
-            (inv) => inv.inventory_item_id === thisVariant.inventory_item_id
+  
+        if (!!!thisProduct) continue;
+  
+        for await (const variant of product.variants) {
+          if (!!!variant.inventory) continue;
+  
+          // CHECK INVENTORY LEVELS -> INVENTORY_ITEM_ID
+          // IF INVENTORY_LEVELS !INCLUDES -> _product.inventory
+          // run inventoryActivate gql mutation / rest fn with no available param
+          const thisVariant = thisProduct?.variants.find(
+            (v: any) =>
+              v.id === variant.shopifyId ||
+              v.admin_graphql_api_id === variant.shopifyId
           );
-
-          const missingLevels = variant.inventory.filter(
-            (x) =>
-              !variantInventoryLevels.some(
-                (l: any) => l.location_id === x.locationId
-              )
-          );
-
-          if (missingLevels.length === 0) continue;
-
-          // parentPort.postMessage({ action: 'message', payload: 'MISSING STOCK!!' })
-          // parentPort.postMessage({ action: 'message', payload: variant.erpId })
-
-          for (const level of missingLevels) {
-            await ShopifyProvider.queueRestRequest(
-              async () =>
-                await ShopifyProvider.activateInventoryLevel({
-                  inventoryItemId: thisVariant.inventory_item_id,
-                  locationId: level.locationId,
-                })
+          if (!!!thisVariant) continue;
+  
+          try {
+            const variantInventoryLevels = allInventoryLevels.filter(
+              (inv) => inv.inventory_item_id === thisVariant.inventory_item_id
             );
+  
+            const missingLevels = variant.inventory.filter(
+              (x) =>
+                !variantInventoryLevels.some(
+                  (l: any) => l.location_id === x.locationId
+                )
+            );
+  
+            if (missingLevels.length === 0) continue;
+  
+
+            console.log({ action: 'message', payload: 'MISSING STOCK!!' })
+            console.log({ action: 'message', payload: variant.erpId })
+  
+            // parentPort.postMessage({ action: 'message', payload: 'MISSING STOCK!!' })
+            // parentPort.postMessage({ action: 'message', payload: variant.erpId })
+  
+            for (const level of missingLevels) {
+              await ShopifyProvider.queueRestRequest(
+                async () =>
+                  await ShopifyProvider.activateInventoryLevel({
+                    inventoryItemId: thisVariant.inventory_item_id,
+                    locationId: level.locationId,
+                  })
+              );
+            }
+          } catch (err) {
+            console.log('checkAllVariantInventories err')
+            console.log(err)
+            // parentPort.postMessage({ action: 'message', payload: 'VARIANT INVENTORY LEVELS RELATED CATCH' })
+            // parentPort.postMessage({ action: 'message', payload: err })
           }
-        } catch (err) {
-          // parentPort.postMessage({ action: 'message', payload: 'VARIANT INVENTORY LEVELS RELATED CATCH' })
-          // parentPort.postMessage({ action: 'message', payload: err })
         }
+      } catch(err) {
+        console.log(err)
       }
     }
 
-    console.timeEnd("INVENTORY_CHECK");
+    console.log('checkAllVariantInventories 4')
+    console.log("INVENTORY_CHECK");
+
   }
 
   public async createUpdateProducts({ nowDate }: { nowDate: string }) {
@@ -937,6 +953,7 @@ class ProductTasksController extends BaseTaskController {
         folders.TEMP,
         `${task.type}_${task._id}.json`
       );
+
       fs.writeFileSync(
         tempRoute,
         JSON.stringify({ resources: erpProducts }, null, 4),

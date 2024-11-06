@@ -3,7 +3,7 @@
 client_id = "f21e3f08224d1930af4cca67c02d8c5d"
 name = "PUMA ERP Greenlight"
 handle = "new-csco-dev-app-1"
-application_url = "https://containers-eve-exchanges-consistently.trycloudflare.com"
+application_url = "https://duncan-newspapers-handy-louis.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_analytics,read_assigned_fulfillment_orders,read_content,read_cust
 
 [auth]
 redirect_urls = [
-  "https://containers-eve-exchanges-consistently.trycloudflare.com/auth/callback",
-  "https://containers-eve-exchanges-consistently.trycloudflare.com/auth/shopify/callback",
-  "https://containers-eve-exchanges-consistently.trycloudflare.com/api/auth/callback"
+  "https://duncan-newspapers-handy-louis.trycloudflare.com/auth/callback",
+  "https://duncan-newspapers-handy-louis.trycloudflare.com/auth/shopify/callback",
+  "https://duncan-newspapers-handy-louis.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
