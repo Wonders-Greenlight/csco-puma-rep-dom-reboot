@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+      "module": "ESNext",
+      "allowJs": true,
+      "lib": [
+          "dom",
+          "dom.iterable",
+          "esnext"
+      ],
+      "esModuleInterop": true,
+      "target": "esnext",
+      "noImplicitAny": true,
+      "moduleResolution": "node",
+      "sourceMap": false,
+      "allowSyntheticDefaultImports": true,
+      "skipLibCheck": true,
+      "outDir": "dist",
+      "baseUrl": ".",
+      "paths": {
+          "*": [
+              "../node_modules/*"
+          ],
+          "@/*": [
+              "./src/*"
+          ]
+      },
+      "resolveJsonModule": true,
+      "isolatedModules": true
+  },
+  "include": [
+      "./src/**/*.ts",
+  ],
+  "exclude": [
+    "../node_modules/**",
+    "dist",
+    "tmp",
+    "**/*/_*.ts"
+  ],
+  "tsc-alias": {
+      "verbose": false,
+      "resolveFullPaths": true,
+      "watch": true
+  }
+}
