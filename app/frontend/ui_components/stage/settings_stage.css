@@ -1,0 +1,612 @@
+
+
+.settings-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  height: 74rem;
+  justify-content: start;
+  align-items: stretch;
+  background-color: rgb(255, 255, 255);
+
+  .settings-stage-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 74rem;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .settings-stage-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 72.75rem;
+    justify-content: start;
+    align-items: stretch;
+  }
+  /* Webhooks Manager container */
+  .child-a.webhooks-manager-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 3.75rem;
+    justify-content: start;
+    align-items: stretch;
+    padding: 1.25rem 1rem 0.75rem 1rem;
+    box-sizing: border-box;
+
+    /* Webhooks Manager title */
+    .webhooks-manager-title {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      font-size: 1.375rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+  }
+
+  /* Container for the buttons */
+  .child-b.sync-buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: 4rem;
+    justify-content: center;
+    align-items: stretch;
+
+    /* Inner container */
+    .sync-buttons-inner-container {
+      display: flex;
+      flex-direction: row;
+      gap: 0.75rem;
+      width: 100%;
+      justify-content: center;
+      align-items: stretch;
+      padding: 0.75rem 1rem;
+      box-sizing: border-box;
+    }
+
+    /* Sync with Shopify button */
+    .sync-button-shopify {
+      display: flex;
+      flex-direction: row;
+      gap: 0rem;
+      width: 100%;
+      justify-content: center;
+      align-items: stretch;
+      padding: 0rem 1rem;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+      background-color: rgb(0, 153, 99.45);
+    }
+
+    .sync-button-shopify-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 700;
+      color: rgb(255, 255, 255);
+    }
+
+    /* Create button */
+    .sync-button-create {
+      display: flex;
+      flex-direction: row;
+      gap: 0rem;
+      /* min-width: 27.53125rem; */
+      justify-content: center;
+      align-items: stretch;
+      padding: 0rem 1rem;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+      background-color: rgb(244.8, 239.7, 229.5);
+    }
+
+    .sync-button-create-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 700;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+  }
+
+  /* Main container */
+  .child-c.order-paid-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 4.5rem;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+
+    /* Left section for order details */
+    .order-paid-left {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      width: 11.0625rem;
+      justify-content: start;
+      align-items: center;
+    }
+
+    /* Icon background */
+    .order-paid-icon {
+      display: flex;
+      flex-direction: row;
+      gap: 0rem;
+      min-width: 3rem;
+      min-height: 3rem;
+      justify-content: center;
+      align-items: stretch;
+      border-radius: 0.5rem;
+      background-color: rgb(244.8, 239.7, 229.5);
+    }
+
+    .order-paid-icon-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+      width: 1.5rem;
+      justify-content: center;
+    }
+
+    .order-paid-icon-fill {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 1.5rem;
+    }
+
+    /* Right section for order details */
+    .order-paid-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .order-paid-title {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+
+    .order-paid-urls {
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 400;
+      color: rgb(160.65, 130.05, 73.95);
+    }
+
+    /* Edit button */
+    .order-paid-edit {
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+      width: 5.25rem;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .order-paid-edit-button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0rem 1rem;
+      box-sizing: border-box;
+      border-radius: 1rem;
+      height: 2rem;
+      background-color: rgb(244.8, 239.7, 229.5);
+    }
+
+    .order-paid-edit-text {
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 500;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+  }
+
+  /* Main container */
+  .child-d.global-settings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 3.75rem;
+    justify-content: start;
+    align-items: stretch;
+    padding: 1.25rem 1rem 0.75rem 1rem;
+    box-sizing: border-box;
+
+    /* Title styling */
+    .global-settings-title {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      font-size: 1.375rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+  }
+
+  /* Main container */
+  .child-e.sandbox-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 7rem;
+    justify-content: start;
+    align-items: stretch;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    box-sizing: border-box;
+
+    /* Inner container */
+    .sandbox-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+      width: 28rem;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    /* Title styling */
+    .sandbox-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+      height: 2rem;
+      justify-content: start;
+      align-items: stretch;
+      padding-bottom: 0.5rem;
+    }
+
+    /* Text styling */
+    .sandbox-text {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+
+    /* Input field styling */
+    .sandbox-input {
+      display: flex;
+      flex-direction: row;
+      gap: 0rem;
+      height: 3.5rem;
+      justify-content: start;
+      align-items: stretch;
+      padding: 0.9375rem;
+      border: 0.0625rem solid #e8decf;
+      box-sizing: border-box;
+      border-radius: 0.75rem;
+      background-color: rgb(255, 255, 255);
+    }
+  }
+
+  /* Main container for the button row */
+  .child-f.update-button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: 2.5rem;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0rem 1rem;
+    box-sizing: border-box;
+
+    /* Button styling */
+    .update-button {
+      display: flex;
+      flex-direction: row;
+      gap: 0rem;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 0rem 1rem;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+      background-color: rgb(0, 153, 99.45);
+    }
+
+    /* Text inside the button */
+    .update-button-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    .update-button-text span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 700;
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  /* Main container for the tasks section */
+  .child-g.tasks-related-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 3.75rem;
+    justify-content: start;
+    align-items: stretch;
+    padding: 1.25rem 1rem 0.75rem 1rem;
+    box-sizing: border-box;
+
+    /* Title styling */
+    .tasks-related-title {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      font-size: 1.375rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+  }
+
+  /* Container for the status bar */
+  .child-h.status-bar-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    height: 4rem;
+    justify-content: start;
+    align-items: stretch;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+
+    /* Status bar wrapper */
+    .status-bar-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 0rem;
+      width: 100%;
+      justify-content: center;
+      align-items: stretch;
+      padding: 0.25rem;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+      background-color: rgb(244.8, 239.7, 229.5);
+    }
+
+    /* Status button (shared for both active and inactive) */
+    .status-button {
+      display: flex;
+      flex-direction: row;
+      gap: 0rem;
+      justify-content: center;
+      align-items: center;
+      padding: 0rem 0.5rem;
+      box-sizing: border-box;
+      border-radius: 1rem;
+    }
+
+    /* Specific styling for active state */
+    .status-button-active {
+      background-color: rgb(255, 255, 255);
+    }
+
+    .status-button-inactive {
+      background-color: transparent;
+    }
+
+    /* Shared styles for the label */
+    .status-label {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    .status-label-text {
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 500;
+    }
+
+    /* Activas label color */
+    .status-label-text-active {
+      color: rgb(28.05, 22.95, 12.75);
+    }
+
+    /* Inactive label color */
+    .status-label-text-inactive {
+      color: rgb(160.65, 130.05, 73.95);
+    }
+  }
+
+  /* Container for the entire row */
+  .child-i.web-item-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 3.5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1rem;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+
+    /* Left section (icon + text) */
+    .web-item-left {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      justify-content: start;
+      align-items: center;
+    }
+
+    /* Icon container */
+    .web-item-icon-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 0.5rem;
+      background-color: rgb(244.8, 239.7, 229.5);
+    }
+
+    /* Icon content */
+    .web-item-icon-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: stretch;
+      width: 1.5rem;
+    }
+
+    /* Colored section inside the icon */
+    .web-item-icon-bar {
+      height: 1.5rem;
+    }
+
+    /* Text container */
+    .web-item-text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    /* Text styling */
+    .web-item-text {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 400;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+
+    /* Right switch container */
+    .web-item-switch-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: stretch;
+      width: 3.1875rem;
+    }
+
+    /* Switch outer container */
+    .web-item-switch-outer {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: stretch;
+      height: 1.9375rem;
+      padding: 0.125rem;
+      box-sizing: border-box;
+      border-radius: 0.96875rem;
+      background-color: rgb(244.8, 239.7, 229.5);
+      box-shadow: 0 2px 2px 0 rgba(201, 227, 174, 0.14),0 3px 1px -2px rgba(76, 81, 71, 0.42),0 1px 5px 0 rgba(42, 43, 41, 0);
+    }
+
+    /* Switch inner container */
+    .web-item-switch-inner {
+      width: 1.6875rem;
+      border-radius: 0.84375rem;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0 2px 2px 0 rgba(13, 15, 11, 0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(42, 43, 41, 0.2);
+    }
+  }
+
+  .child-k.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    height: 1.25rem;
+    justify-content: start;
+    align-items: stretch;
+
+    .background-white {
+      background-color: rgb(255, 255, 255);
+    }
+  }
+}
+
+
+.settings-stage-child-e.sandbox-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 7rem;
+    justify-content: start;
+    align-items: stretch;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    box-sizing: border-box;
+
+    /* Inner container */
+    .sandbox-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+      width: 28rem;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    /* Title styling */
+    .sandbox-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+      height: 2rem;
+      justify-content: start;
+      align-items: stretch;
+      padding-bottom: 0.5rem;
+    }
+
+    /* Text styling */
+    .sandbox-text {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+
+    /* Input field styling */
+    .sandbox-input {
+      display: flex;
+      flex-direction: row;
+      gap: 0rem;
+      height: 3.5rem;
+      justify-content: start;
+      align-items: stretch;
+      padding: 0.9375rem;
+      border: 0.0625rem solid #e8decf;
+      box-sizing: border-box;
+      border-radius: 0.75rem;
+      background-color: rgb(255, 255, 255);
+    }
+  }

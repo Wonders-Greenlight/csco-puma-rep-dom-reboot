@@ -1,0 +1,99 @@
+/* Container for the entire row */
+.ios_check_input.child-i.web-item-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height: 3.5rem;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0rem 1rem; */
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+
+  /* Left section (icon + text) */
+  .web-item-left {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: start;
+    align-items: center;
+  }
+
+  /* Icon container */
+  .web-item-icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(244.8, 239.7, 229.5);
+  }
+
+  /* Icon content */
+  .web-item-icon-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    width: 1.5rem;
+  }
+
+  /* Colored section inside the icon */
+  .web-item-icon-bar {
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Text container */
+  .web-item-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  /* Text styling */
+  .web-item-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: rgb(28.05, 22.95, 12.75);
+  }
+
+  /* Right switch container */
+  .web-item-switch-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    width: 3.1875rem;
+  }
+
+  /* Switch outer container */
+  .web-item-switch-outer {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+    height: 1.9375rem;
+    padding: 0.125rem;
+    box-sizing: border-box;
+    border-radius: 0.96875rem;
+    background-color: rgb(244.8, 239.7, 229.5);
+    box-shadow: 0 2px 2px 0 rgba(201, 227, 174, 0.14),
+      0 3px 1px -2px rgba(76, 81, 71, 0.42), 0 1px 5px 0 rgba(42, 43, 41, 0);
+  }
+
+  /* Switch inner container */
+  .web-item-switch-inner {
+    width: 1.6875rem;
+    border-radius: 0.84375rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 2px 0 rgba(13, 15, 11, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(42, 43, 41, 0.2);
+  }
+}

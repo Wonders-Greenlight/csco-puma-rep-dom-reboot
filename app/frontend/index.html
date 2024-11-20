@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Ensures that the UI is properly scaled in the Shopify Mobile app -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Shopify App Bridge [START] -->
+    <meta name="shopify-api-key" content="66f0b5447d784a4cff5beadd0bd4d101" />
+    <meta name="shopify-shop" content="x5g2xa-uu.myshopify.com" />
+    <!-- Shopify App Bridge [END] -->
+     
+
+  </head>
+  <body>
+    <div id="app" style="background-color: white; min-height: 100vh;"><!--index.jsx injects App.tsx here--></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+
+       window.onload = () => {
+        sessionStorage.setItem('host', 'eDVnMnhhLXV1Lm15c2hvcGlmeS5jb20vYWRtaW4')
+        window.__SHOPIFY_DEV_HOST = sessionStorage.getItem('host');
+        
+       }
+    </script>
+  </body>
+</html>

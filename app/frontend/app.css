@@ -1,0 +1,266 @@
+html {
+  background-color: #fff;
+}
+
+input.disabled {
+  pointer-events: none;
+  color: rgb(160.65, 130.05, 73.95);
+}
+
+.child-a-detail-task.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  width: unset;
+  justify-content: start;
+  align-items: stretch;
+  padding: 1.5rem 1rem 0.75rem 1rem;
+  box-sizing: border-box;
+
+  .title {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: rgb(28.05, 22.95, 12.75);
+  }
+}
+
+.summary-head.child-a.outer-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0rem;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 1rem 1rem 0.5rem 1rem;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+
+  /* Content container */
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    width: 100%;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  /* Title text */
+  .title-text {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+    font-weight: 700;
+    color: rgb(28.05, 22.95, 12.75);
+  }
+}
+
+.locations-stage-buttons-container {
+
+  .button-flat:hover::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    border: 2px solid #b392994d;
+  }
+
+  .button-flat:active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    border: 2px solid #b392994d;
+  }
+
+  .button:hover::after,
+  .create-button:hover::after,
+  .cancel-button:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    border: 2px solid rgba(11, 10, 10, 0.428);
+    border-radius: 1.5rem;
+  }
+
+  
+  .button:active::after,
+  .create-button:active::after,
+  .cancel-button:active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    border: 2px solid #b392994d;
+    border-radius: 1.5rem;
+  }
+
+  .child-e.outer-container, .child-e-locations.outer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    width: unset;
+    justify-content: start;
+    align-items: stretch;
+
+    /* Status container */
+    .status-container {
+      display: flex;
+      flex-direction: row;
+      gap: 0rem;
+      height: 4rem;
+      width: unset;
+      justify-content: start;
+      align-items: stretch;
+      padding: 0.75rem 1rem;
+      box-sizing: border-box;
+    }
+
+    /* Inner container */
+    .inner-container {
+      display: flex;
+      flex-direction: row;
+      gap: 0rem;
+      height: unset;
+      width: 100%;
+      justify-content: center;
+      align-items: stretch;
+      padding: 0.25rem;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+      background-color: rgb(244.8, 239.7, 229.5);
+    }
+
+    /* Status button */
+    .status-button {
+      display: flex;
+      flex-direction: row;
+      gap: 0rem;
+      justify-content: center;
+      align-items: center;
+      padding: 0rem 0.5rem;
+      box-sizing: border-box;
+      border-radius: 1rem;
+    }
+
+    .status-button.active {
+      width: 6.375rem;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .status-button.inactive,
+    .status-button.inoperative {
+      background-color: unset;
+    }
+
+    .status-button.inactive {
+      width: 7rem;
+    }
+
+    .status-button.inoperative {
+      width: 8.5rem;
+    }
+
+    /* Status label */
+    .status-label {
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    .status-label-text {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 500;
+    }
+
+    .status-label-text.active {
+      color: rgb(28.05, 22.95, 12.75);
+    }
+
+    .status-label-text.inactive,
+    .status-label-text.inoperative {
+      color: rgb(160.65, 130.05, 73.95);
+    }
+
+    /* Button container */
+    .button-container {
+      display: flex;
+      flex-direction: row;
+      gap: 0.75rem;
+      justify-content: start;
+      align-items: stretch;
+      padding: 0.75rem 1rem;
+      box-sizing: border-box;
+      height: 4.5rem;
+    }
+
+    /* Create button */
+    .create-button {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      align-items: center;
+      padding: 0rem 1.25rem;
+      box-sizing: border-box;
+      border-radius: 1.5rem;
+      background-color: rgb(0, 153, 99.45);
+    }
+
+    .create-button-text {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 700;
+      color: rgb(255, 255, 255);
+    }
+
+    /* Cancel button */
+    .cancel-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 0rem 1.25rem;
+      box-sizing: border-box;
+      border-radius: 1.5rem;
+      background-color: rgb(244.8, 239.7, 229.5);
+    }
+
+    .cancel-button-text {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 700;
+      color: rgb(28.05, 22.95, 12.75);
+    }
+
+    /* Spacer */
+    .spacer {
+      display: flex;
+      flex-direction: column;
+      gap: 0rem;
+      height: 1.25rem;
+      justify-content: start;
+      align-items: stretch;
+      background-color: rgb(255, 255, 255);
+    }
+  }
+}
