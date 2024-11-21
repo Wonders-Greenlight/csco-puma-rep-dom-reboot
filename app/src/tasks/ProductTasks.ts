@@ -994,23 +994,23 @@ class ProductTasksController extends BaseTaskController {
         console.log("this.checkAllVariantInventories |End of message");
       } 
       
-      const _tempRoute = path.resolve(
-        folders.TEMP,
-        `${task.type}_latest_gqlPayload.json`
-      );
+      // const _tempRoute = path.resolve(
+      //   folders.TEMP,
+      //   `${task.type}_latest_gqlPayload.json`
+      // );
 
-      const _tempRoute1 = path.resolve(
-        folders.TEMP,
-        `${task.type}_latest_pre_gqlPayload.json`
-      );
+      // const _tempRoute1 = path.resolve(
+      //   folders.TEMP,
+      //   `${task.type}_latest_pre_gqlPayload.json`
+      // );
 
-      fs.writeFileSync(_tempRoute1, JSON.stringify(products, null, 4), {
-        encoding: "utf-8",
-      });
+      // fs.writeFileSync(_tempRoute1, JSON.stringify(products, null, 4), {
+      //   encoding: "utf-8",
+      // });
 
-      fs.writeFileSync(_tempRoute, JSON.stringify(products.map(e => this.buildCreateUpdateGqlParams(e)), null, 4), {
-        encoding: "utf-8",
-      });
+      // fs.writeFileSync(_tempRoute, JSON.stringify(products.map(e => this.buildCreateUpdateGqlParams(e)), null, 4), {
+      //   encoding: "utf-8",
+      // });
 
       for (let i = 0; i < products.length; i++) {
         const _product = products[i];

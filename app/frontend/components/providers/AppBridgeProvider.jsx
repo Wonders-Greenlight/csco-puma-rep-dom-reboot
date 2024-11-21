@@ -43,7 +43,7 @@ export function AppBridgeProvider({ children }) {
    
     return {
       host,
-      shop:'puma-rep-dominicana.myshopify.com',
+      shop:'nine-west-dom.myshopify.com',
       apiKey: process.env.SHOPIFY_API_KEY,
       forceRedirect: true,
     };
