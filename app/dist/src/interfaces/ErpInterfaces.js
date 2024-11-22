@@ -1,0 +1,23 @@
+import { TaskType } from "./TaskInterfaces";
+export const ERP_ACTION = {
+    UPDATE_STOCK: 'actualizarStock', // THIS ARE ALL EXAMPLE EVENTS
+    ADD_SKU: 'agregarSKU',
+    CREATE_PRODUCT: 'CrearProducto',
+    HIDE_PRODUCT: 'OcultarProducto',
+    SHOW_PRODUCT: 'MostrarProducto',
+    // FROM APP TO ERP
+    UPDATE_PRODUCT_ID: 'actualizarIDProducto',
+    CREATE_CLIENT: 'crearCliente',
+    SEND_PAID_ORDER: 'nuevaOrdenPedido',
+};
+export const ERP_TASK = {
+    [ERP_ACTION.UPDATE_STOCK]: TaskType.UPDATE_STOCK,
+    [ERP_ACTION.ADD_SKU]: TaskType.CREATE_UPDATE_PRODUCTS,
+    [ERP_ACTION.CREATE_PRODUCT]: TaskType.CREATE_UPDATE_PRODUCTS,
+    [ERP_ACTION.HIDE_PRODUCT]: TaskType.CREATE_UPDATE_PRODUCTS,
+    [ERP_ACTION.SHOW_PRODUCT]: TaskType.CREATE_UPDATE_PRODUCTS,
+    // FROM APP TO ERP
+    [ERP_ACTION.UPDATE_PRODUCT_ID]: TaskType.APP_TO_ERP_ACTION,
+    [ERP_ACTION.CREATE_CLIENT]: TaskType.APP_TO_ERP_ACTION,
+    [ERP_ACTION.SEND_PAID_ORDER]: TaskType.APP_TO_ERP_ACTION,
+};

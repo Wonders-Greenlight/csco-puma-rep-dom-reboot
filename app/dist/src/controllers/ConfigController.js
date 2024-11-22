@@ -1,0 +1,67 @@
+import TaskProvider from '../providers/TaskProvider.js';
+// Models
+import AppConfig from '../models/AppCfgModel.js';
+class ConfigController {
+    async getConfig(req, res) {
+        try {
+            const config = await AppConfig.findOne();
+            return res.json(config || {});
+        }
+        catch (err) {
+            return res.status(500).json({ message: 'Error while retrieving configs' });
+        }
+    }
+    async setConfig(req, res) {
+        const errors = [];
+        if (!req.body.mode)
+            errors.push('Please send app mode ENUM value');
+        if (!req.body.apiSandboxUrl)
+            errors.push('Please send test api url');
+        if (errors.length > 0)
+            return res.status(400).json({ created: false, errors });
+        try {
+            const existConfigs = await AppConfig.countDocuments();
+            if (existConfigs > 0) {
+                const config = await AppConfig.find();
+                return res.json({
+                    created: false,
+                    message: 'Not created, already exists a configuration',
+                    config: config[0]
+                });
+            }
+            else {
+                const configData = {};
+                Object.keys(req.body).forEach(key => { if (req.body[key])
+                    configData[key] = req.body[key]; });
+                const newCfg = new AppConfig(configData);
+                const config = await newCfg.save();
+                return res.status(201).json({
+                    created: true,
+                    config
+                });
+            }
+        }
+        catch (err) {
+            return res.status(500).json({ errors: ['Error while creating or updating config on server'] });
+        }
+    }
+    async updateConfig(req, res) {
+        if (Object.keys(req.body).length === 0)
+            return res.status(400).json({ updated: false, message: 'Please send payload to update' });
+        const { id } = req.params;
+        try {
+            req.body.updatedAt = Date.now();
+            const updateConfig = await AppConfig.findByIdAndUpdate(id, req.body, { new: true });
+            TaskProvider.reloadCronTab();
+            return res.json({
+                updated: true,
+                message: 'Sucessfully updated',
+                config: updateConfig
+            });
+        }
+        catch (err) {
+            return res.status(500).json({ message: `Error while updating ${id} config` });
+        }
+    }
+}
+export default new ConfigController();

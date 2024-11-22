@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Ensures that the UI is properly scaled in the Shopify Mobile app -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Shopify App Bridge [START] -->
+    <meta name="shopify-api-key" content="f21e3f08224d1930af4cca67c02d8c5d" />
+    <meta name="shopify-shop" content="puma-rep-dominicana.myshopify.com" />
+    <!-- Shopify App Bridge [END] -->
+     
+
+    <script type="module" crossorigin src="/assets/index.8019745a.js"></script>
+    <link rel="stylesheet" href="/assets/index.c22b9f5d.css">
+  </head>
+  <body>
+    <div id="app" style="background-color: white; min-height: 100vh;"><!--index.jsx injects App.tsx here--></div>
+    
+    <script>
+
+       window.onload = () => {
+        sessionStorage.setItem('host', 'cHVtYS1yZXAtZG9taW5pY2FuYS5teXNob3BpZnkuY29tL2FkbWlu')
+        window.__SHOPIFY_DEV_HOST = sessionStorage.getItem('host');
+        
+       }
+    </script>
+  </body>
+</html>
