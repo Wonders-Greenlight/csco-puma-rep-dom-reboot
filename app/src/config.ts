@@ -15,7 +15,7 @@ const config = {
         API_SECRET_KEY: process.env.SHOPIFY_API_SECRET,
         ACCESS_TOKEN: process.env.ACCESS_TOKEN || '',
         SCOPES: (process.env.SCOPES || d_scope).split(','),
-        SHOP: process.env.SHOP || 'activa-shop.com.do',
+        SHOP: process.env.SHOP || 'puma-rep-dominicana.myshopify.com',
         HOST: (process.env.HOST || 'nine-unlike-comfort-start.trycloudflare.com').replace(/https:\/\//, ''),
         LAMBDA_ACCESS_TOKEN: process.env.LAMBDA_ACCESS_TOKEN
     },
@@ -28,15 +28,15 @@ const config = {
         allowedOrigins: [
             process.env.HOST, 
             "*", 
-            "http://activa-shop.com.do", 
-            "https://activa-shop.com.do", 
+            "http://puma-rep-dominicana.myshopify.com", 
+            "https://puma-rep-dominicana.myshopify.com", 
             'http://localhost:8081',
             'https://localhost:8081',
             `http://${process.env.APP_URL.replace(/https:\/\//, '')}`, 
             `http://${process.env.APP_URL.replace(/https:\/\//, '')}`, 
             `http://${process.env.HOST.replace(/https:\/\//, '')}`, 
             `https://${process.env.HOST.replace(/https:\/\//, '')}`, 
-            ...(process.env.CORS || 'https://nine-unlike-comfort-start.trycloudflare.com,https://activa-shop.com.do').split(',')
+            ...(process.env.CORS || 'https://nine-unlike-comfort-start.trycloudflare.com,https://puma-rep-dominicana.myshopify.com').split(',')
         ]
     },
     JWT: {

@@ -103,7 +103,7 @@ async function setStore() {
         const ShopifyStore = await import('../store/ShopifyAppStore')
         // if ( !URLParams.has('shop') ) throw new Error('Shop query param not found!')
 
-        ShopifyStore.state.shop = 'activa-shop.com.do';
+        ShopifyStore.state.shop = 'puma-rep-dominicana.myshopify.com';
         console.log("ShopifyStore.state.shop", ShopifyStore.state.shop)
     } catch (err) {
         console.error('ERROR WHILE SETTING STORE!!!')

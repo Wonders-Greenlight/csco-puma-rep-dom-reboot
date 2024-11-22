@@ -23,7 +23,7 @@ export function ProductsCard() {
     isLoading: isLoadingCount,
     isRefetching: isRefetchingCount,
   } = useAppQuery({
-    url: "/api/products/count?shop=activa-shop.com.do",
+    url: "/api/products/count?shop=puma-rep-dominicana.myshopify.com",
     reactQueryOptions: {
       onSuccess: () => {
         setIsLoading(false);

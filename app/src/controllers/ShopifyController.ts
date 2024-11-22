@@ -93,12 +93,12 @@ class ShopifyController {
         })
 
         const offlineSessionId = shopify.api.session.getOfflineId(
-            process.env.SHOP || 'activa-shop.com.do'
+            process.env.SHOP || 'puma-rep-dominicana.myshopify.com'
         )
 
         // use sessionId to retrieve session from app's session storage
         // getSessionFromStorage() must be provided by application
-        console.log('process.env.SHOP || activa-shop.com.do')
+        console.log('process.env.SHOP || puma-rep-dominicana.myshopify.com')
         
         console.log('\n\nHERE SESSION!!!!')
         console.log(onlineSessionId)

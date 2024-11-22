@@ -43,7 +43,7 @@ export function AppBridgeProvider({ children }) {
    
     return {
       host,
-      shop:'activa-shop.com.do',
+      shop:'puma-rep-dominicana.myshopify.com',
       apiKey: process.env.SHOPIFY_API_KEY,
       forceRedirect: true,
     };
