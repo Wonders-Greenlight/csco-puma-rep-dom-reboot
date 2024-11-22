@@ -43,7 +43,7 @@ export function AppBridgeProvider({ children }) {
    
     return {
       host,
-      shop:'nine-west-dom.myshopify.com',
+      shop:'activa-shop.com.do',
       apiKey: process.env.SHOPIFY_API_KEY,
       forceRedirect: true,
     };
