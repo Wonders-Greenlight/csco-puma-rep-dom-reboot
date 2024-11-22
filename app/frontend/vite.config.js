@@ -67,16 +67,12 @@ export default defineConfig({
     include: ['@shopify/app-bridge']
   },
   build: {
-    // minify: true,
-    commonjsOptions: {
-      include: [/@shopify\/app-bridge/, /node_modules/]
-    },
     minify: false, // Disable minification
     rollupOptions: {
       output: {
-        // Preserve variable and function names
-        format: 'es',
-        preserveModules: true,
+        preserveModules: true, // Keep module boundaries
+        preserveEntrySignatures: 'strict', // Ensure strict export signatures
+        format: 'es', // Use ES module output format
       },
     },
   },
