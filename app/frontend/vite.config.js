@@ -71,7 +71,6 @@ export default defineConfig({
     rollupOptions: {
       output: {
         preserveModules: true, // Keep module boundaries
-        preserveEntrySignatures: 'strict', // Ensure strict export signatures
         format: 'es', // Use ES module output format
       },
     },
