@@ -15639,7 +15639,7 @@ var env$1 = {};
           window.MobileWebView.postMessage(payload);
           return;
         }
-        var messageOrigin = 'https://ec2-54-82-124-71.compute-1.amazonaws.com';
+        var messageOrigin = new URL("https://" + message.source.host).origin;
         contentWindow.postMessage(message, messageOrigin);
       },
       subscribe: function(handler) {
@@ -33800,13 +33800,13 @@ var ShopifyApp;
 if (typeof another === "function") {
   ShopifyApp = another({
     apiKey: "f21e3f08224d1930af4cca67c02d8c5d",
-    host: localStorage.getItem("host") || window.__SHOPIFY_DEV_HOST || URLParams.get("host") || "",
+    host: localStorage.getItem("host") || window.__SHOPIFY_DEV_HOST || URLParams.get("host") || "cHVtYS1yZXAtZG9taW5pY2FuYS5teXNob3BpZnkuY29tL2FkbWlu",
     forceRedirect: true
   });
 } else {
   ShopifyApp = another.createApp({
     apiKey: "f21e3f08224d1930af4cca67c02d8c5d",
-    host: localStorage.getItem("host") || window.__SHOPIFY_DEV_HOST || URLParams.get("host") || "",
+    host: localStorage.getItem("host") || window.__SHOPIFY_DEV_HOST || URLParams.get("host") || "cHVtYS1yZXAtZG9taW5pY2FuYS5teXNob3BpZnkuY29tL2FkbWlu",
     forceRedirect: true
   });
 }

@@ -18,13 +18,13 @@ var ShopifyApp;
 if (typeof AppBridge === 'function') {
     ShopifyApp = AppBridge({
         apiKey: process.env.SHOPIFY_API_KEY || '',
-        host: localStorage.getItem('host') || window.__SHOPIFY_DEV_HOST || URLParams.get('host') || '',
+        host: localStorage.getItem('host') || window.__SHOPIFY_DEV_HOST || URLParams.get('host') || 'cHVtYS1yZXAtZG9taW5pY2FuYS5teXNob3BpZnkuY29tL2FkbWlu',
         forceRedirect: true
     })
 } else {
     ShopifyApp = another.createApp({
         apiKey: process.env.SHOPIFY_API_KEY || '',
-        host: localStorage.getItem('host') || window.__SHOPIFY_DEV_HOST || URLParams.get('host') || '',
+        host: localStorage.getItem('host') || window.__SHOPIFY_DEV_HOST || URLParams.get('host') || 'cHVtYS1yZXAtZG9taW5pY2FuYS5teXNob3BpZnkuY29tL2FkbWlu',
         forceRedirect: true
     })
 }
