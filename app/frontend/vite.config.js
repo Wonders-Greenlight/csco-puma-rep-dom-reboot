@@ -46,17 +46,17 @@ export default defineConfig({
   envDir: process.cwd(),
   root: dirname(fileURLToPath(import.meta.url)),
   plugins: [react(),
-  // {
-  //   name: 'log-imports',
-  //   resolveId(source, importer) {
-  //     if (importer) {
-  //       console.log(`Imported '${source}' in '${importer}'`);
-  //     } else {
-  //       console.log(`Entry file: '${source}'`);
-  //     }
-  //     return null; // Let Vite handle resolving as usual
-  //   }
-  // }
+    // {
+    //   name: 'log-imports',
+    //   resolveId(source, importer) {
+    //     if (importer) {
+    //       console.log(`Imported '${source}' in '${importer}'`);
+    //     } else {
+    //       console.log(`Entry file: '${source}'`);
+    //     }
+    //     return null; // Let Vite handle resolving as usual
+    //   }
+    // }
   ],
 
   define: {
@@ -67,11 +67,20 @@ export default defineConfig({
     include: ['@shopify/app-bridge']
   },
   build: {
-    minify: true,
+    // minify: true,
     commonjsOptions: {
       include: [/@shopify\/app-bridge/, /node_modules/]
-    }
+    },
+    minify: false, // Disable minification
+    rollupOptions: {
+      output: {
+        // Preserve variable and function names
+        format: 'es',
+        preserveModules: true,
+      },
+    },
   },
+
   resolve: {
     preserveSymlinks: true,
     alias: [
