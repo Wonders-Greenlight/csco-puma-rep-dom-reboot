@@ -68,12 +68,7 @@ export default defineConfig({
   },
   build: {
     minify: false, // Disable minification
-    rollupOptions: {
-      output: {
-        preserveModules: true, // Keep module boundaries
-        format: 'es', // Use ES module output format
-      },
-    },
+    sourcemap: false,
   },
 
   resolve: {
