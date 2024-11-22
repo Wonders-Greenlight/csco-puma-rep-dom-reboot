@@ -53,18 +53,18 @@ export const serveClientApp: ExpressMiddleware = async ( req, res, next ) => {
     //     console.log(err)
     // }
 
-    // return res
-    // .status(200)
-    // .set('Content-Type', 'text/html')
-    // .set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate')
-    // .set('Pragma', 'no-cache')
-    // .set('Expires', '0')
-    // .sendFile(join(server.STATIC_PATH, 'index.html'));
-
     return res
-        .status(200)
-        .set('Content-Type', 'text/html')
-        .sendFile(join(server.STATIC_PATH, 'index.html'));
+    .status(200)
+    .set('Content-Type', 'text/html')
+    .set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate')
+    .set('Pragma', 'no-cache')
+    .set('Expires', '0')
+    .sendFile(join(server.STATIC_PATH, 'index.html'));
+
+    // return res
+    //     .status(200)
+    //     .set('Content-Type', 'text/html')
+    //     .sendFile(join(server.STATIC_PATH, 'index.html'));
 }
 
 export const rootCheckAndRedirect: ExpressMiddleware = async ( req, res, next ) => {
